@@ -25,10 +25,11 @@ export default class App extends React.Component {
       number: data.number,
     };
     const normalizedName = data.name.toLowerCase();
-    const checkUsers = this.state.contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedName)
+    const checkUsers = this.state.contacts.map(contact =>
+      contact.name.toLowerCase()
     );
-    if (checkUsers.length !== 0) {
+    console.log(checkUsers);
+    if (checkUsers.includes(normalizedName)) {
       return alert(`${user.name} is already in contacts`);
     } else {
       this.setState(prevState => ({

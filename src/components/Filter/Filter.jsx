@@ -17,7 +17,7 @@ const Filter = ({ filter, filterChange }) => {
 
 export default Filter;
 
-Filter.prototypes = {
+Filter.propTypes = {
   filter: PropTypes.string.isRequired,
   filterChange: PropTypes.func.isRequired,
 };
