@@ -28,7 +28,6 @@ export default class App extends React.Component {
     const checkUsers = this.state.contacts.map(contact =>
       contact.name.toLowerCase()
     );
-    console.log(checkUsers);
     if (checkUsers.includes(normalizedName)) {
       return alert(`${user.name} is already in contacts`);
     } else {
